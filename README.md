@@ -12,8 +12,8 @@ API : http://localhost:8888/employee/register
 JSON
 ````
 {
-    "first_name": "User9",
-    "last_name": "Sanwal"
+    "first_name": "John",
+    "last_name": "Doe"
 }
 ````
 
