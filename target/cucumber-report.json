@@ -1,0 +1,547 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-12T11:12:09.913Z",
+        "line": 3,
+        "name": "As a Admin I want to update the application passcode",
+        "description": "",
+        "id": "admin-updates-the-passcode-of-application;as-a-admin-i-want-to-update-the-application-passcode",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1201818788,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the admin calls /authentication/passcode with New Passcode \"7777\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7777\"",
+                  "offset": 59
+                }
+              ],
+              "location": "UpdateAppPasscodeStepDefinitions.the_admin_calls_authentication_passcode_with_New_Passcode(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4808694,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the admin receives answer \"Application Passcode has been updated successfully.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Application Passcode has been updated successfully.\"",
+                  "offset": 26
+                }
+              ],
+              "location": "UpdateAppPasscodeStepDefinitions.the_admin_receives_answer(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Admin updates the Passcode of application",
+    "description": "",
+    "id": "admin-updates-the-passcode-of-application",
+    "keyword": "Feature",
+    "uri": "classpath:features/authentication/01_UpdateAppPasscode.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-12T11:12:11.159Z",
+        "line": 3,
+        "name": "As a user I want to access the application using the app passcode",
+        "description": "",
+        "id": "user-get-access-using-app-passcode;as-a-user-i-want-to-access-the-application-using-the-app-passcode",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 128536638,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user calls /authentication/passcode with Passcode \"7777\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7777\"",
+                  "offset": 54
+                }
+              ],
+              "location": "AuthenticateAppPasscodeStepDefinitions.the_user_calls_authentication_passcode_with_Passcode(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1439368,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user receives status \"true\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"true\"",
+                  "offset": 25
+                }
+              ],
+              "location": "AuthenticateAppPasscodeStepDefinitions.the_user_receives_answer(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "User get access using app passcode",
+    "description": "",
+    "id": "user-get-access-using-app-passcode",
+    "keyword": "Feature",
+    "uri": "classpath:features/authentication/02_AuthencticateAppPasscode.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-12T11:12:11.311Z",
+        "line": 3,
+        "name": "As a User I want to register myself into app by providing some basic information",
+        "description": "",
+        "id": "register-a-new-user;as-a-user-i-want-to-register-myself-into-app-by-providing-some-basic-information",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 860285298,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user calls /authentication/register with first_name \"John\" , last_name \"Doe\" , email \"test@test.com\" and password \"root\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"John\"",
+                  "offset": 56
+                },
+                {
+                  "val": "\"Doe\"",
+                  "offset": 75
+                },
+                {
+                  "val": "\"test@test.com\"",
+                  "offset": 89
+                },
+                {
+                  "val": "\"root\"",
+                  "offset": 118
+                }
+              ],
+              "location": "UserRegistrationStepDefinitions.the_user_calls_authentication_register_with_first_name_last_name_email_and_password(String,String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 476882,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user will receives response \"A verification link has been sent to your email account.Please click on the link to activate your account.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A verification link has been sent to your email account.Please click on the link to activate your account.\"",
+                  "offset": 32
+                }
+              ],
+              "location": "UserRegistrationStepDefinitions.the_user_receives_response(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Register a new User",
+    "description": "",
+    "id": "register-a-new-user",
+    "keyword": "Feature",
+    "uri": "classpath:features/authentication/03_UserRegistration.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-12T11:12:12.181Z",
+        "line": 3,
+        "name": "As a User I want to login into app by providing the username and password",
+        "description": "",
+        "id": "login-into-the-application;as-a-user-i-want-to-login-into-app-by-providing-the-username-and-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 46857149,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user calls /authentication/login with email \"test@test.com\" and password \"root\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"test@test.com\"",
+                  "offset": 48
+                },
+                {
+                  "val": "\"root\"",
+                  "offset": 77
+                }
+              ],
+              "location": "UserLoginStepDefinitions.the_client_calls_login(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cUser authentication [successful] !\u003e but was:\u003cUser authentication [Failed] !\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat com.techno.homes.authentication.steps.UserLoginStepDefinitions.the_client_receives_answer_as(UserLoginStepDefinitions.java:26)\n\tat ✽.the user receives answer of login call as \"User authentication successful !\"(classpath:features/authentication/04_UserLogin.feature:5)\n",
+              "duration": 4994750,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "the user receives answer of login call as \"User authentication successful !\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User authentication successful !\"",
+                  "offset": 42
+                }
+              ],
+              "location": "UserLoginStepDefinitions.the_client_receives_answer_as(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login into the application",
+    "description": "",
+    "id": "login-into-the-application",
+    "keyword": "Feature",
+    "uri": "classpath:features/authentication/04_UserLogin.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-12T11:12:12.288Z",
+        "line": 3,
+        "name": "As a User I want to check my account information",
+        "description": "",
+        "id": "get-the-user-account-information;as-a-user-i-want-to-check-my-account-information",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 76349376,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user calls /authentication/user with User ID : 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 51
+                }
+              ],
+              "location": "GetUserInfoStepDefinitions.the_user_calls_authentication_user_with_User_ID(Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 613699,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user receives information includes email \"test@test.com\" , First name \"John\" , Last name \"Doe\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"test@test.com\"",
+                  "offset": 45
+                },
+                {
+                  "val": "\"John\"",
+                  "offset": 74
+                },
+                {
+                  "val": "\"Doe\"",
+                  "offset": 93
+                }
+              ],
+              "location": "GetUserInfoStepDefinitions.the_user_receives_information_includes_email_First_name_Last_name(String,String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Get the user account information",
+    "description": "",
+    "id": "get-the-user-account-information",
+    "keyword": "Feature",
+    "uri": "classpath:features/authentication/05_GetUserInfo.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-12T11:12:12.375Z",
+        "line": 3,
+        "name": "As a User I want to update my account information",
+        "description": "",
+        "id": "update-the-user-account-information;as-a-user-i-want-to-update-my-account-information",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 74227869,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user calls /authentication/user with User ID : 1 , First name \"John\" and Last name \"Doe\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 51
+                },
+                {
+                  "val": "\"John\"",
+                  "offset": 66
+                },
+                {
+                  "val": "\"Doe\"",
+                  "offset": 87
+                }
+              ],
+              "location": "UpdateUserInfoStepDefinitions.the_user_calls_authentication_user_with_User_ID_First_name_and_Last_name(Integer,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 447191,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user receives response as \"User profile successfully updated\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User profile successfully updated\"",
+                  "offset": 30
+                }
+              ],
+              "location": "UpdateUserInfoStepDefinitions.the_user_receives_response(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Update the user account information",
+    "description": "",
+    "id": "update-the-user-account-information",
+    "keyword": "Feature",
+    "uri": "classpath:features/authentication/06_UpdateUserInfo.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-12T11:12:12.455Z",
+        "line": 3,
+        "name": "As a User I want to change password of my account",
+        "description": "",
+        "id": "change-user-password;as-a-user-i-want-to-change-password-of-my-account",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1826711533,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user calls /authentication/user/password with User ID : 1, Current Password : \"root\" and New Password : \"root1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 60
+                },
+                {
+                  "val": "\"root\"",
+                  "offset": 82
+                },
+                {
+                  "val": "\"root1\"",
+                  "offset": 108
+                }
+              ],
+              "location": "ChangeUserPasswordStepDefinitions.the_user_calls_authentication_user_password_with_User_ID_Current_Password_and_New_Password(Integer,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 473732,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user receives response \"Password updated successfully !\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Password updated successfully !\"",
+                  "offset": 27
+                }
+              ],
+              "location": "ChangeUserPasswordStepDefinitions.the_user_receives_response(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Change user password",
+    "description": "",
+    "id": "change-user-password",
+    "keyword": "Feature",
+    "uri": "classpath:features/authentication/07_ChangeUserPassword.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-12T11:12:14.287Z",
+        "line": 3,
+        "name": "As a User I want to logout of the application",
+        "description": "",
+        "id": "user-logout-of-the-application;as-a-user-i-want-to-logout-of-the-application",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 85190933,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user calls /authentication/user/logout with User ID : 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 58
+                }
+              ],
+              "location": "UserLogoutStepDefinitions.the_user_calls_authentication_user_logout_with_User_ID(Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 505857,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user receives answer \"User has been logout successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User has been logout successfully\"",
+                  "offset": 25
+                }
+              ],
+              "location": "UserLogoutStepDefinitions.the_user_receives_answer(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "User logout of the application",
+    "description": "",
+    "id": "user-logout-of-the-application",
+    "keyword": "Feature",
+    "uri": "classpath:features/authentication/08_UserLogout.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-12T11:12:14.471Z",
+        "line": 3,
+        "name": "As a User I want to save my profile image",
+        "description": "",
+        "id": "save-user-profile-image;as-a-user-i-want-to-save-my-profile-image",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "the user calls /authentication/user/account/image with User ID : 1 and Image Encoded String \"some-encoded-string-here\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "the user receives the profile image url \"http://localhost:8092/authentication/user/account/image/77.jpg\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Save user profile image",
+    "description": "",
+    "id": "save-user-profile-image",
+    "keyword": "Feature",
+    "uri": "classpath:features/authentication/SaveUserProfileImage.feature",
+    "tags": []
+  }
+]
