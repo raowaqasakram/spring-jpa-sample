@@ -1,17 +1,17 @@
 FROM openjdk:8u121-jdk-alpine
 
 # Keep consistent with build.gradle
-ENV APP_JAR_NAME authentication
+ENV APP_JAR_NAME spring-jpa-sample-all
 
 # Install curl
 RUN apk --update add curl bash && \
 	rm -rf /var/cache/apk/*
-	
+
 RUN mkdir /app
 
 ADD ${APP_JAR_NAME}.jar /app/
 ADD run.sh /app/
-RUN chmod +x /app/run.sh 
+RUN chmod +x /app/run.sh
 
 WORKDIR /app
 
