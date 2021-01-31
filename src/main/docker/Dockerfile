@@ -1,7 +1,7 @@
 FROM openjdk:8u121-jdk-alpine
 
 # Keep consistent with build.gradle
-ENV APP_JAR_NAME spring-jpa-sample-all
+ENV APP_JAR_NAME spring-jpa-sample
 
 # Install curl
 RUN apk --update add curl bash && \
